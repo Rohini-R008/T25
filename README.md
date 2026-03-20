@@ -2,29 +2,28 @@
 
 ## Overview
 
-In this project, I designed a modern landing page for a sample application called **FlowApp** using **Tailwind CSS**. The main aim was to practice advanced UI design concepts like glassmorphism, animations, and responsive layouts.
+In this project, I designed a modern landing page for a sample application called **FlowApp** using **Tailwind CSS**. The main aim was to practice responsive design, animations, and modern UI concepts like glassmorphism.
 
 ## Features
 
-* I created a **glass-style navbar** with a floating effect at the top.
-* The **hero section** includes gradient background, heading, buttons, and a dashboard image with floating elements.
-* Added a **bento-style features section**, where the main AI card is larger and other feature cards are arranged around it with icons and descriptions.
-* Implemented **hover effects and animations** like scaling, glow, and transitions.
+* I created a **glass-style navigation bar** with a fixed position at the top.
+* The **hero section** includes gradient background, animated elements, heading, buttons, and an image.
+* Added a **bento-style features section**, where one main card is highlighted and other feature cards are arranged around it.
+* Implemented **hover effects and transitions** using Tailwind utilities.
 * Designed a **testimonials section** with ratings, user images, and feedback.
-* Included a **CTA section** with gradient background and buttons.
-* Added a **footer with links and social buttons (X, LinkedIn, YouTube)**.
+* Included a **call-to-action (CTA) section** with gradient background and buttons.
+* Added a **footer section** with links and social media buttons.
 
 ## Technologies Used
 
 * HTML
-* Tailwind CSS 
-* CSS
-* JavaScript 
+* Tailwind CSS (CDN)
 
 ## How to Run
 
 Open the `index.html` file in a browser. Internet connection is required for Tailwind CSS.
 
-## What i learnt
+## What I Learned
 
-Through this project, I learned how to combine Tailwind utilities with custom CSS to create a visually appealing and responsive UI, along with adding animations and interactive elements.
+Through this project, I learned how to use Tailwind CSS utilities to build a responsive and visually appealing UI, and how to implement layouts, spacing, and basic animations without using external CSS.
+
