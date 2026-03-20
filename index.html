@@ -6,70 +6,34 @@
 <link rel="stylesheet" href="styles.css">
 <script src="https://cdn.tailwindcss.com"></script>
 
-<style>
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-30px); }
-}
-.float { animation: float 6s ease-in-out infinite; }
-
-@keyframes rotateSlow {
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
-}
-.rotate-slow { animation: rotateSlow 20s linear infinite; }
-
-@keyframes fadeUp {
-  from { opacity:0; transform:translateY(40px); }
-  to { opacity:1; transform:translateY(0); }
-}
-.fade-up { animation: fadeUp 1s ease forwards; }
-
-.glow:hover {
-  box-shadow: 0 0 20px rgba(168,85,247,0.7);
-}
-
-.glass {
-  backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.grid-bg {
-  background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-</style>
 
 </head>
 
 <body class="bg-[#0b1120] text-white">
 
-<nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] glass rounded-xl px-6 py-3 flex justify-between items-center z-50">
+<nav class="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md px-6 py-4 flex justify-between items-center">
 
-  <h1 class="font-semibold">⚡ FlowApp</h1>
+  <h1 class="font-semibold text-white">⚡ FlowApp</h1>
 
-  <div class="hidden md:flex gap-6 text-sm">
-    <a href="#">Features</a>
-    <a href="#">Pricing</a>
-    <a href="#">Reviews</a>
+  <div class="hidden md:flex gap-6 text-sm text-gray-300">
+    <a href="#" class="hover:text-white">Features</a>
+    <a href="#" class="hover:text-white">Pricing</a>
+    <a href="#" class="hover:text-white">Reviews</a>
   </div>
 
-  <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 glow">
+  <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white">
     Get Started
   </button>
 
 </nav>
 
-<section class="min-h-screen flex items-center justify-center relative grid-bg">
+<section class="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-gray-900 via-slate-900 to-black">
 
-  <div class="absolute w-96 h-96 bg-purple-600 rounded-full blur-3xl opacity-30 float"></div>
+  <div class="absolute w-96 h-96 bg-purple-600 rounded-full blur-3xl opacity-30 animate-pulse"></div>
 
   <div class="max-w-6xl grid md:grid-cols-2 gap-10 px-6 items-center">
 
-    <div class="fade-up">
+    <div class="transition duration-700">
       <p class="text-sm text-green-400 mb-3">● Now with AI features</p>
 
       <h1 class="text-4xl md:text-5xl font-bold leading-tight">
@@ -82,9 +46,13 @@
       </p>
 
       <div class="flex gap-4 mt-6">
-        <button class="px-6 py-3 bg-blue-500 rounded-lg glow">Start Free Trial</button>
-        <button class="px-6 py-3 border border-gray-500 rounded-lg">Watch Demo</button>
-      </div>
+  <button class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white">
+    Start Free Trial
+  </button>
+  <button class="px-6 py-3 border border-gray-400 rounded-lg">
+    Watch Demo
+  </button>
+</div>
       <div class="flex items-center gap-4 mt-6">
 
   <div class="flex -space-x-3">
@@ -108,8 +76,8 @@
       <img src="https://images.unsplash.com/photo-1587614298171-a223667e51c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8d29ya2luZyUyMHByb2Zlc3Npb25hbHxlbnwwfHwwfHx8MA%3D%3D"
            class="rounded-xl transition transform group-hover:scale-105 group-hover:rotate-1">
 
-      <div class="absolute top-5 right-5 glass px-3 py-2 text-sm">+127%</div>
-      <div class="absolute bottom-5 left-5 glass px-3 py-2 text-sm">Task completed</div>
+      <div class="absolute top-5 right-5 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 text-sm">+127%</div>
+      <div class="absolute bottom-5 left-5 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 text-sm">Task completed</div>
     </div>
 
   </div>
@@ -122,7 +90,7 @@
 
   <div class="grid md:grid-cols-3 gap-6">
 
-  <div class="md:col-span-2 glass p-6 rounded-xl flex items-center gap-6">
+  <div class="md:col-span-2 bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl flex items-center gap-6">
     
     <div class="w-1/2">
       <h3 class="text-xl font-semibold mb-2">AI-Powered Automation</h3>
@@ -138,7 +106,7 @@
 
 <div class="flex flex-col gap-4">
 
-  <div class="glass p-4 rounded-xl hover:scale-105 transition">
+  <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:scale-105 transition">
     <div class="text-blue-400 text-xl mb-2">⚡</div>
     <h4 class="font-semibold">Lightning Fast</h4>
     <p class="text-gray-400 text-sm mt-1">
@@ -146,7 +114,7 @@
     </p>
   </div>
 
-  <div class="glass p-4 rounded-xl hover:scale-105 transition">
+  <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:scale-105 transition">
     <div class="text-green-400 text-xl mb-2">🔒</div>
     <h4 class="font-semibold">Bank-Level Security</h4>
     <p class="text-gray-400 text-sm mt-1">
@@ -156,7 +124,7 @@
 
 </div>
 
-<div class="glass p-4 rounded-xl hover:scale-105 transition">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:scale-105 transition">
   <div class="text-purple-400 text-xl mb-2">📊</div>
   <h4 class="font-semibold">Advanced Analytics</h4>
   <p class="text-gray-400 text-sm mt-1">
@@ -164,7 +132,7 @@
   </p>
 </div>
 
-<div class="glass p-4 rounded-xl hover:scale-105 transition">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:scale-105 transition">
   <div class="text-blue-400 text-xl mb-2">🔄</div>
   <h4 class="font-semibold">Real-time Sync</h4>
   <p class="text-gray-400 text-sm mt-1">
@@ -172,7 +140,7 @@
   </p>
 </div>
 
-<div class="glass p-4 rounded-xl hover:scale-105 transition">
+<div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl hover:scale-105 transition">
   <div class="text-pink-400 text-xl mb-2">💬</div>
   <h4 class="font-semibold">Team Collaboration</h4>
   <p class="text-gray-400 text-sm mt-1">
@@ -189,7 +157,7 @@
 
   <div class="grid md:grid-cols-3 gap-6">
 
-    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl hover:scale-105 transition">
 
   <p class="text-yellow-400">★★★★★</p>
 
@@ -211,7 +179,7 @@
 
 </div>
 
-    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl hover:scale-105 transition">
 
   <p class="text-yellow-400">★★★★★</p>
 
@@ -233,7 +201,7 @@
 
 </div>
 
-    <div class="glass p-6 rounded-xl hover:scale-105 transition">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl hover:scale-105 transition">
 
   <p class="text-yellow-400">★★★★★</p>
 
